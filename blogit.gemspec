@@ -18,7 +18,7 @@ Gem::Specification.new do |s|
 
   s.add_dependency "RedCloth", ">=4.2.9"
   s.add_dependency 'kramdown'
-  s.add_dependency 'nokogiri', '>=1.5.0'
+  s.add_dependency 'nokogiri', '>=1.6.0'
   s.add_dependency 'acts-as-taggable-on', '>=2.2.1'
   s.add_dependency "kaminari", '>=0.13.0'
   s.add_dependency "jquery-rails"
