@@ -11,9 +11,7 @@ class Blogit::Parsers::MarkdownParser
   def parsed
     ensure_pygments_is_installed if Blogit::configuration.highlight_code_syntax
     
-    renderer = Blogit::configuration.highlight_code_syntax ?  Redcarpet::Render::HTMLWithAlbino : Redcarpet::Render::HTML
-    markdown = Redcarpet::Markdown.new(renderer, Blogit.configuration.redcarpet_options)
-    html_content = markdown.render(@content).html_safe
+    html_content = Kramdown::Document.new(@content).to_html
   end
 
   private
