@@ -1,7 +1,6 @@
 class Blogit::Parsers::MarkdownParser
   
   require "nokogiri"
-  require "albino"
   require "blogit/renderers"
     
   def initialize(content)
